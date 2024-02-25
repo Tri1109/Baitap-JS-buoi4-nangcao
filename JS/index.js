@@ -1,68 +1,6 @@
 /*---------------------Bài 1-------------------*/
-// function isLeapYear(year) {
-//     return (year % 4 === 0);
-// }
-
-// function isValidDate(day, month, year) {
-//     // Kiểm tra xem ngày có hợp lệ không dựa trên tháng và năm
-//     var daysInMonth = [31, isLeapYear(year) ? 29 : 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
-//     return (day > 0 && day <= daysInMonth[month - 1]);
-// }
-
-// function getNextDate(day, month, year) {
-//     // Kiểm tra xem ngày có hợp lệ không
-//     if (!isValidDate(day, month, year)) {
-//         return "Ngày không hợp lệ!";
-//     }
-
-//     // Nếu ngày cuối cùng của tháng
-//     if (day === 31 && month === 12) {
-//         return `1/1/${year + 1}`;
-//     }
-
-//     // Nếu ngày cuối cùng của tháng
-//     if (day === daysInMonth[month - 1]) {
-//         return `1/${month + 1}/${year}`;
-//     }
-
-//     // Ngày tiếp theo trong cùng tháng
-//     return `${day + 1}/${month}/${year}`;
-// }
-
-// function getPreviousDate(day, month, year) {
-//     // Kiểm tra xem ngày có hợp lệ không
-//     if (!isValidDate(day, month, year)) {
-//         return "Ngày không hợp lệ!";
-//     }
-
-//     // Nếu là ngày đầu tiên của tháng
-//     if (day === 1 && month === 1) {
-//         return `31/12/${year - 1}`;
-//     }
-
-//     // Nếu là ngày đầu tiên của tháng
-//     if (day === 1) {
-//         return `${daysInMonth[month - 2]}/${month - 1}/${year}`;
-//     }
-
-//     // Ngày trước đó trong cùng tháng
-//     return `${day - 1}/${month}/${year}`;
-// }
-
-// // Ví dụ sử dụng hàm
-// function handleDate() {
-// let day = +parseInt(document.getElementById("ngay").value);
-// let month = +parseInt(document.getElementById("thang").value);
-// let year = +parseInt(document.getElementById("nam").value);
-// var daysInMonth = [31, isLeapYear(year) ? 29 : 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
-
-// document.getElementById("result1").innerHTML = `Ngày tiếp theo là: ${getNextDate(day, month, year)} <br> Ngày trước đó là: ${getPreviousDate(day, month, year)}`;
-// console.log(`Ngày tiếp theo là: ${getNextDate(day, month, year)}`);
-// console.log(`Ngày trước đó là: ${getPreviousDate(day, month, year)}`);
-// }
-
 function isLeapYear(year) {
-    return (year % 4 === 0 && year % 100 !== 0) || (year % 400 === 0);
+    return (year % 4 === 0);
 }
 
 function getDaysInMonth(month, year) {
@@ -113,9 +51,6 @@ function getPreviousDate(day, month, year) {
     return { day: previousDay, month: previousMonth, year: previousYear };
 }
 
-
-
-// Ví dụ sử dụng hàm
 function handleDate() {
 let day = parseInt(document.getElementById("ngay").value);
 let month = parseInt(document.getElementById("thang").value);
@@ -258,14 +193,10 @@ console.log("CD", distanceCD);
 
 // Tìm ra điểm có giá trị lớn nhất
 function findMax(numbers) {
-    // Gán giá trị đầu tiên trong mảng là số nhỏ nhất
     let max = numbers[0];
 
-    // Duyệt qua từng phần tử trong mảng để so sánh với số nhỏ nhất hiện tại
     for (let i = 1; i < numbers.length; i++) {
         if (numbers[i] > max) {
-            // Nếu phần tử hiện tại nhỏ hơn số nhỏ nhất,
-            // gán giá trị mới cho số nhỏ nhất
             max = numbers[i];
         }
     }

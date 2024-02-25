@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Bài tập JS nâng cao</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="./CSS/style.css" />
+  </head>
+  <body>
+    <div class="container py-5">
+      <h2 class="bg-warning text-center">Bài 1</h2>
+
+      <div class="form">
+        <div class="form-group">
+          <label for="ngaylam">Ngày</label>
+          <input
+            type="text"
+            name="ngay"
+            id="ngay"
+            class="form-control"
+            placeholder="Nhập vào ngày"
+          />
+        </div>
+        <div class="form-group">
+          <label for="ngaylam">Tháng</label>
+          <input
+            type="text"
+            name="thang"
+            id="thang"
+            class="form-control"
+            placeholder="Nhập vào tháng"
+          />
+        </div>
+        <div class="form-group">
+          <label for="ngaylam">Năm</label>
+          <input
+            type="text"
+            name="nam"
+            id="nam"
+            class="form-control"
+            placeholder="Nhập vào năm"
+          />
+        </div>
+
+        <button class="btn btn-danger" onclick="handleDate()">Kết quả</button>
+
+        <div id="result1"></div>
+      </div>
+      <br /><br /><br /><br />
+      <h2 class="bg-warning text-center">Bài 2</h2>
+      <div class="form">
+        <div class="form-group">
+          <label for="ngaylam">Tháng</label>
+          <input
+            type="text"
+            name="month2"
+            id="month2"
+            class="form-control"
+            placeholder="Nhập vào tháng"
+          />
+        </div>
+        <div class="form-group">
+          <label for="ngaylam">Năm</label>
+          <input
+            type="text"
+            name="year2"
+            id="year2"
+            class="form-control"
+            placeholder="Nhập vào năm"
+          />
+        </div>
+        <button class="btn btn-danger" onclick="handleDate2()">
+          Tính số ngày của tháng đó
+        </button>
+
+        <div id="result2"></div>
+      </div>
+      <br /><br /><br /><br />
+      <h2 class="bg-warning text-center">Bài 3</h2>
+      <div class="form">
+        <div class="form-group">
+          <label for="ngaylam">Số nguyên có 3 chữ số</label>
+          <input
+            type="text"
+            name="number"
+            id="number"
+            class="form-control"
+            placeholder="Nhập vào số nguyên có 3 chữ số"
+          />
+        </div>
+        <button class="btn btn-danger" onclick="handleNumber()">
+          In ra cách đọc số đó
+        </button>
+
+        <div id="result3"></div>
+      </div>
+      <br /><br /><br /><br />
+      <h2 class="bg-warning text-center">Bài 4</h2>
+      <div class="form row">
+        <div class="form-group col-6">
+          <label for="toado">Nhập vào tọa độ X Trường D</label>
+          <input
+            type="text"
+            name="xD"
+            id="xD"
+            class="form-control"
+            placeholder=""
+          />
+        </div>
+        <div class="form-group col-6">
+          <label for="toado">Nhập vào tọa độ Y Trường D</label>
+          <input
+            type="text"
+            name="yD"
+            id="yD"
+            class="form-control"
+            placeholder=""
+          />
+        </div>
+        <div class="form-group col-6">
+          <label for="toado">Nhập vào tọa độ X sinh viên A</label>
+          <input
+            type="text"
+            name="xA"
+            id="xA"
+            class="form-control"
+            placeholder=""
+          />
+        </div>
+        <div class="form-group col-6">
+          <label for="toado">Nhập vào tọa độ Y sinh viên A</label>
+          <input
+            type="text"
+            name="yA"
+            id="yA"
+            class="form-control"
+            placeholder=""
+          />
+        </div>
+        <div class="form-group col-6">
+          <label for="toado">Nhập vào tọa độ X sinh viên B</label>
+          <input
+            type="text"
+            name="xB"
+            id="xB"
+            class="form-control"
+            placeholder=""
+          />
+        </div>
+        <div class="form-group col-6">
+          <label for="toado">Nhập vào tọa độ Y sinh viên B</label>
+          <input
+            type="text"
+            name="yB"
+            id="yB"
+            class="form-control"
+            placeholder=""
+          />
+        </div>
+        <div class="form-group col-6">
+          <label for="toado">Nhập vào tọa độ X sinh viên C</label>
+          <input
+            type="text"
+            name="xC"
+            id="xC"
+            class="form-control"
+            placeholder=""
+          />
+        </div>
+        <div class="form-group col-6">
+          <label for="toado">Nhập vào tọa độ Y sinh viên C</label>
+          <input
+            type="text"
+            name="yC"
+            id="yC"
+            class="form-control"
+            placeholder=""
+          />
+        </div>
+        <button class="btn btn-danger" onclick="tinhToaDo()">
+          Tính khoảng cách sinh viên xa trường nhất
+        </button>
+
+        <div id="result4" class="col-12 pt-5"></div>
+      </div>
+    </div>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+      crossorigin="anonymous"
+    ></script>
+    <script src="./JS/index.js"></script>
+  </body>
+</html>
